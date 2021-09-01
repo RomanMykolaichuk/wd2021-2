@@ -1,0 +1,335 @@
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2
+$ git init
+Initialized empty Git repository in C:/webdev/lab1-2/.git/
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git add .
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ get commit
+bash: get: command not found
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git commit
+[master (root-commit) 08554c1] first commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git log
+commit 08554c159ade3748fb1ae4552590e75d234ccd7c (HEAD -> master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:02:30 2021 +0300
+
+    first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git commit -am 'world to World'
+[master fb97f71] world to World
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git log
+commit fb97f718c3f3906895cc788df32d7e6ece07a90a (HEAD -> master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:05:39 2021 +0300
+
+    world to World
+
+commit 08554c159ade3748fb1ae4552590e75d234ccd7c
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:02:30 2021 +0300
+
+    first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git branch lab1
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git branch
+  lab1
+* master
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git checkout lab1
+Switched to branch 'lab1'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git status
+On branch lab1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git commit -am 'pargraph added'
+[lab1 a0bc078] pargraph added
+ 1 file changed, 1 insertion(+)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ got log
+bash: got: command not found
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git log
+commit a0bc078b7d5b5dda8f8d68032940d70b3481a893 (HEAD -> lab1)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:10:26 2021 +0300
+
+    pargraph added
+
+commit fb97f718c3f3906895cc788df32d7e6ece07a90a (master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:05:39 2021 +0300
+
+    world to World
+
+commit 08554c159ade3748fb1ae4552590e75d234ccd7c
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:02:30 2021 +0300
+
+    first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git log --graph --oneline
+* a0bc078 (HEAD -> lab1) pargraph added
+* fb97f71 (master) world to World
+* 08554c1 first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git checkout master
+Switched to branch 'master'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git commit -am 'h3 added'
+[master 1c6a502] h3 added
+ 1 file changed, 1 insertion(+)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git checkout lab1
+Switched to branch 'lab1'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git merge master
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1|MERGING)
+$ git status
+On branch lab1
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1|MERGING)
+$ git commit -am 'master merged'
+[lab1 33b447a] master merged
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git log --oneline
+33b447a (HEAD -> lab1) master merged
+1c6a502 (master) h3 added
+a0bc078 pargraph added
+fb97f71 world to World
+08554c1 first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git commit -am 'p after h3'
+[lab1 9765914] p after h3
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git checkout master
+Switched to branch 'master'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git remote
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git remote
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git remote add origin https://github.com/RomanMykolaichuk/wd2021-2.git
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git remote
+origin
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git push git push
+error: src refspec push does not match any
+error: failed to push some refs to 'git'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git push -u origin lab1
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (18/18), 1.59 KiB | 406.00 KiB/s, done.
+Total 18 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/RomanMykolaichuk/wd2021-2.git
+ * [new branch]      lab1 -> lab1
+Branch 'lab1' set up to track remote branch 'lab1' from 'origin'.
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (master)
+$ git checkout lab1
+Switched to branch 'lab1'
+Your branch is up to date with 'origin/lab1'.
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 683 bytes | 40.00 KiB/s, done.
+From https://github.com/RomanMykolaichuk/wd2021-2
+   9765914..87423a8  lab1       -> origin/lab1
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git status
+On branch lab1
+Your branch is behind 'origin/lab1' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git pull
+Updating 9765914..87423a8
+Fast-forward
+ index.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git log
+commit 87423a8fe3645ffe47c611a9c37052ee82db87e0 (HEAD -> lab1, origin/lab1)
+Author: RomanMykolaichuk <33193842+RomanMykolaichuk@users.noreply.github.com>
+Date:   Wed Sep 1 17:31:20 2021 +0300
+
+    Update index.html
+
+commit 97659140618114bee69c2d6f899bb1eb9a6b99ec
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:20:09 2021 +0300
+
+    p after h3
+
+commit 33b447a41a6fa68d50bb0d4b1a319c6baf62ebc8
+Merge: a0bc078 1c6a502
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:18:40 2021 +0300
+
+    master merged
+
+commit 1c6a50267db39c64399a0e8c818c268bd8c83d30 (master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:12:38 2021 +0300
+
+    h3 added
+
+commit a0bc078b7d5b5dda8f8d68032940d70b3481a893
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:10:26 2021 +0300
+
+    pargraph added
+
+commit fb97f718c3f3906895cc788df32d7e6ece07a90a
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:05:39 2021 +0300
+
+    world to World
+
+commit 08554c159ade3748fb1ae4552590e75d234ccd7c
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 17:02:30 2021 +0300
+
+    first commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git fetch
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git commit -am 'lab1'
+[lab1 25259a3] lab1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git fetch
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git status
+On branch lab1
+Your branch is ahead of 'origin/lab1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RomanMykolaichuk/wd2021-2.git
+   87423a8..25259a3  lab1 -> lab1
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/lab1-2 (lab1)
+$
